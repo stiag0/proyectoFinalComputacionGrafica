@@ -20,12 +20,13 @@ public:
 
 	float interpolate(float x, float y, float accuracy);
 	vector<ofVec3f> anclas3;
-	vector<ofVec2f> bezier_curve(vector<ofVec2f>& anchor, float accuracy);
+	vector<ofVec3f> bezier_curve(vector<ofVec3f>& anchor, float accuracy);
 	ofxIntSlider accuracy;
 	ofxButton clearBtn;
 	ofxButton drawBtn;
 	ofxPanel gui;
-	std::vector<ofVec2f> controlPts;
+	std::vector<ofVec3f> controlPts;
+	bool pintar;
 	bool drawPressed;
 	ofImage anchor_image;
 
