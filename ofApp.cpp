@@ -2,6 +2,7 @@
 using namespace std;
 //--------------------------------------------------------------
 void ofApp::setup() {
+	webCam.setup(400,400);
 	ofEnableDepthTest();
 	ofSetVerticalSync(true);
 	ofBackground(70, 70, 70);
@@ -20,11 +21,12 @@ void ofApp::setup() {
 
 //--------------------------------------------------------------
 void ofApp::update() {
-
+	webCam.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+	webCam.draw(0,0);
 	gui.draw();
 	cam.begin();
 	if (clearBtn) {

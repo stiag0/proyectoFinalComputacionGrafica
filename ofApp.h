@@ -12,12 +12,12 @@ class ofApp : public ofBaseApp {
 
 public:
 
-	void setup();
+	void setup(); 
 	void update();
 	void draw();
 
 	ofEasyCam cam;
-
+	ofVideoGrabber webCam;
 	float interpolate(float x, float y, float accuracy);
 	vector<ofVec3f> anclas3;
 	vector<ofVec3f> bezier_curve(vector<ofVec3f>& anchor, float accuracy);
